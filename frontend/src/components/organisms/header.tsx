@@ -24,6 +24,7 @@ import NewChatButton from 'components/molecules/newChatButton';
 import { useAuth } from 'hooks/auth';
 
 import { projectSettingsState } from 'state/project';
+import SelectSourceButton from "../molecules/selectSourceButton";
 
 interface INavItem {
   to: string;
@@ -169,7 +170,9 @@ export default function Header() {
           spacing={1}
           color="text.primary"
         >
+
           <NewChatButton />
+          <SelectSourceButton />
           <Box ml={1} />
           <GithubButton href={pSettings?.ui?.github} />
           <UserButton />
